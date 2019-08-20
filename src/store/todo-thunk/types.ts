@@ -22,7 +22,7 @@ interface IToggleAction {
 
 interface IDeleteAction {
   type: typeof DELETE_TODO,
-  title: number
+  todos: ITodo[]
 }
 
 export type TodoActionTypes = IAddAction | IToggleAction | IDeleteAction | IGetAllAction

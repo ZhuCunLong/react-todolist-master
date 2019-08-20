@@ -1,6 +1,6 @@
 import {ITodo} from '../todo/types'
 import {Reducer} from 'redux'
-import {GET_ALL_ITEM, ADD_TODO, TodoActionTypes, TOGGLE_TODO} from './types'
+import {ADD_TODO, DELETE_TODO, GET_ALL_ITEM, TodoActionTypes, TOGGLE_TODO} from './types'
 
 const initialState: ITodo[] = []
 
@@ -17,6 +17,8 @@ export const todoTReducer: Reducer<ITodo[], TodoActionTypes> = (state = initialS
         }
       ]
     case TOGGLE_TODO:
+      return action.todos
+    case DELETE_TODO:
       return action.todos
     default:
       return state

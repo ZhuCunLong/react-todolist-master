@@ -1,4 +1,4 @@
-import {ADD_TODO, GET_ALL_ITEM, TOGGLE_TODO} from './types'
+import {ADD_TODO, GET_ALL_ITEM, TOGGLE_TODO, DELETE_TODO} from './types'
 import {getTodoList, addTodo, deleteTodo, toggleTodo} from '../../api/todo'
 import {message} from 'antd'
 
@@ -38,7 +38,7 @@ export const deleteTodoItemAction = (title: string) => {
     deleteTodo(params).then((res: any) => {
       if (res.status === 1) {
         dispatch({
-          type: GET_ALL_ITEM,
+          type: DELETE_TODO,
           todos: res.data
         })
         message.success(res.msg)
