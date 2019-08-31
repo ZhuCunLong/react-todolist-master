@@ -40,8 +40,8 @@ const addTodo = async (title) => {
 const deleteTodo = async (title) => {
 	if (await Todo.exists({title})) {
 		return new Promise((resolve, reject) => {
-			Todo.deleteOne({title},async (error) => {
-				if(error){
+			Todo.deleteOne({title}, async (error) => {
+				if (error) {
 					reject(error)
 				} else {
 					const {data} = await getTodoList()
@@ -61,11 +61,11 @@ const deleteTodo = async (title) => {
 }
 
 const toggleTodo = async (title, isFinished) => {
-	if(await Todo.exists({title})){
+	if (await Todo.exists({title})) {
 		return new Promise(async (resolve, reject) => {
 			try {
 				isFinished = !isFinished
-				await Todo.updateOne({title},{isFinished})
+				await Todo.updateOne({title}, {isFinished})
 				// const {data} = await getTodoList()
 				const data = await Todo.find()
 				resolve({
