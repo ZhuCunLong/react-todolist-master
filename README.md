@@ -1,68 +1,96 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# react-todolist-master
 
-## Available Scripts
+## 简介
 
-In the project directory, you can run:
+这可能只是在学习react过程当中随手的一个小demo，充其量就是一个hello world级别的小应用，但还是希望能给刚开始学习react的朋友一点小小的帮助
 
-### `npm start`
+项目中使用的技术栈
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<ul>
+  <li>
+    <a href="https://react.docschina.org/">
+      <img alt="react" src="https://img.shields.io/badge/react-16.8.6-brightgreen.svg">
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/microsoft/TypeScript">
+      <img alt="typescript" src="https://img.shields.io/badge/typescript-3.5.3-brightgreen.svg">
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/ReactTraining/react-router/">
+      <img alt="react-router" src="https://img.shields.io/badge/react--router-5.0.1-brightgreen.svg">
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/reduxjs/redux">
+      <img alt="redux" src="https://img.shields.io/badge/redux-4.0.4-brightgreen.svg">
+    </a>
+    <ul>
+      <li>
+        <a href="https://github.com/reduxjs/react-redux">
+          <img alt="react-redux" src="https://img.shields.io/badge/react--redux-7.1.0-blue.svg">
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/reduxjs/redux-thunk">
+          <img alt="redux-thunk" src="https://img.shields.io/badge/redux--thunk-2.3.0-blue.svg">
+        </a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="https://github.com/axios/axios">
+      <img alt="axios" src="https://img.shields.io/badge/axios-0.19.0-brightgreen.svg">
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/koajs/koa">
+      <img alt="koa2" src="https://img.shields.io/badge/koa-2.7.0-brightgreen.svg">
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/ZijianHe/koa-router">
+      <img alt="koa-router" src="https://img.shields.io/badge/koa--router-7.4.0-brightgreen.svg">
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/Automattic/mongoose">
+      <img alt="mongoose" src="https://img.shields.io/badge/mongoose-5.6.9-brightgreen.svg">
+    </a>
+  </li>
+</ul>
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+前端部分使用react全家桶，axios作为前后端交互，服务端使用koa2+mongoose作为数据支撑
 
-### `npm test`
+项目实现了三个版本的todoList，分别是纯组件版本，reudx版本和结合服务端的异步redux版本
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 启动
 
-### `npm run build`
+```shell
+[# 克隆项目
+git clone https://github.com/ZhuCunLong/react-todolist-master
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# 进入项目目录
+cd react-todolist-master
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+# 安装依赖
+npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 建议不要直接使用 cnpm 安装依赖，会有各种诡异的 bug。可以通过如下操作解决 npm 下载速度慢的问题
+npm install --registry=https://registry.npm.taobao.org
 
-### `npm run eject`
+# 启动前端
+npm run start
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# 启动服务端
+# 在启动服务端之前，确保安装了mongoDb并打开相关服务
+npm run server
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 采坑合集
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+记录了在开发过程中碰到的大大小小采过得坑吧，也算是一个小小的总结
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[请移步](https://blog.csdn.net/bye_cherry/article/details/100320320)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
